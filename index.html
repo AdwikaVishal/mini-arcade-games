@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warrior Arena - Enhanced</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div id="gameContainer">
+    <div id="ui">
+      <div id="healthBar">
+        <div id="healthFill"></div>
+      </div>
+      <div id="score">Score: 0</div>
+      <div id="level">Level: 1</div>
+      <div id="treasureCount">Treasures: 0/3</div>
+    </div>
+    <canvas id="gameCanvas" width="800" height="500"></canvas>
+    <div id="gameMenu">
+      <h1>Warrior Arena</h1>
+      <p>Use arrow keys to move. Collect treasures and reach the door to advance!</p>
+      <button id="startButton">Start Game</button>
+      <div id="instructions">
+        <h2>Power-ups:</h2>
+        <p>❤️ - Health boost</p>
+        <p>⚡ - Speed boost</p>
+        <p>🛡️ - Temporary invincibility</p>
+      </div>
+    </div>
+    <div id="gameOverScreen" class="hidden">
+      <h2>Game Over</h2>
+      <p>Your Score: <span id="finalScore">0</span></p>
+      <button id="restartButton">Play Again</button>
+    </div>
+    <div id="levelCompleteScreen" class="hidden">
+      <h2>Level Complete!</h2>
+      <p>Preparing next level...</p>
+    </div>
+  </div>
+
+  <!-- Audio elements -->
+  <audio id="bgMusic" loop>
+    <source src="assets/sounds/background.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="collectSound">
+    <source src="assets/sounds/collect.wav" type="audio/mpeg">
+  </audio>
+  <audio id="hitSound">
+    <source src="assets/sounds/hit.wav" type="audio/mpeg">
+  </audio>
+  <audio id="powerupSound">
+    <source src="assets/sounds/powerup.wav" type="audio/mpeg">
+  </audio>
+  <audio id="winSound">
+    <source src="assets/sounds/win.wav" type="audio/mpeg">
+  </audio>
+  <audio id="doorSound">
+    <source src="assets/sounds/door.wav" type="audio/mpeg">
+  </audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
